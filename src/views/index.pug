@@ -1,0 +1,28 @@
+extends layouts/main.pug 
+block content
+  div(class="row mb-3")
+    div(class="col-12")
+      include partials/username.pug
+  
+  div(class="row")
+    div(class="col-6")
+      div(class="mb-3")
+        include partials/product-form.pug
+      div(class="mb-3")
+        include partials/products-table.pug
+      
+    div(class="col-6")
+      div(class="card")
+        div(class="card-body")
+          h3(class="card-title") Mensajes
+          div(class="row")
+            div(class="col")
+              input(class="form-control" id="messageInput" placeholder="Mensaje...")
+            div(class="col-auto")
+              button(class="btn btn-primary" id="sendMessageButton") Enviar
+          br
+          div(id="messagesContainer")
+
+block scripts
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.js")
+  script(src="/js/app.js")

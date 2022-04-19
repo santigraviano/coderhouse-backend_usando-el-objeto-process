@@ -1,0 +1,10 @@
+extends ../layouts/main.pug 
+
+block content
+  div(class="card bg-primary")
+    div(class="card-body")
+      h1(class="card-title text-white")= `Hasta luego ${ user.name }`
+
+block scripts
+  script.
+    setTimeout(() => { location.replace('/login') }, 2000)

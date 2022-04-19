@@ -1,0 +1,14 @@
+extends layouts/main.pug 
+block content 
+  h1() Productos
+  table(class="table")
+    thead
+      tr
+        th Nombre
+        th Precio
+        th Foto
+    tbody(id="productsTableBody")
+
+  
+block scripts
+  script(src="/js/products.js")

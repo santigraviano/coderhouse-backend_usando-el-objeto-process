@@ -1,0 +1,23 @@
+div(class="card")
+  div(class="card-body")
+    h3(class="card-title") Crear producto
+    form(id="createProductForm")
+      div(class="mb-3")
+        label(class="form-label") Nombre
+        input(type="text" class="form-control" name="name")
+      div(class="mb-3")
+        label(class="form-label") Descripción
+        input(type="text" class="form-control" name="description")
+      div(class="mb-3")
+        label(class="form-label") Código
+        input(type="text" class="form-control" name="code")
+      div(class="mb-3")
+        label(class="form-label") Foto
+        input(type="text" class="form-control" name="image")
+      div(class="mb-3")
+        label(class="form-label") Precio
+        input(type="number" step="0.01" class="form-control" name="price")
+      div(class="mb-3")
+        label(class="form-label") Stock
+        input(type="number" class="form-control" name="stock")
+      button(type="submit" class="btn btn-primary") Crear producto

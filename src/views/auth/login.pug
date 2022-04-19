@@ -1,0 +1,20 @@
+extends ../layouts/main.pug
+
+block content
+  div(class="row")
+    div(class="col-4 offset-4")
+      div(class="card")
+        div(class="card-body")
+          h1(class="card-title") Login de usuario
+          form(id="loginForm" method="post" action="/login")
+            div(class="mb-3")
+              label(class="form-label") Correo electrónico
+              input(type="text" class="form-control" name="email")
+            div(class="mb-3")
+              label(class="form-label") Contraseña
+              input(type="password" class="form-control" name="password")
+            div(class="mb-3")
+              include ../partials/auth-errors
+            div(class="d-flex justify-content-between")
+              button(type="submit" class="btn btn-primary") Ingresar
+              a(href="/signup" class="btn") Registrarme

@@ -1,0 +1,26 @@
+extends layouts/main
+
+block content
+  table(class="table")
+    tbody()
+      tr
+        td Argumentos de entrada
+        td= info.args.toString()
+      tr
+        td Path de ejecución
+        td= info.execPath
+      tr
+        td Nombre la plataforma
+        td= info.platform
+      tr
+        td ID del proceso
+        td= info.pid
+      tr
+        td Versión de NodeJS
+        td= info.version
+      tr
+        td Carpeta del proyecto
+        td= info.projectPath
+      tr
+        td Memoria total reservada
+        td= info.rss
